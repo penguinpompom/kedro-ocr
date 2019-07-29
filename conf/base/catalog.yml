@@ -1,0 +1,16 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in the kedro docs under `Accessing data`
+# You can access the kedro docs by running `kedro docs`
+
+raw:
+  type: kedro_ocr.io.image_local.ImageLocalDataSet
+  filepath: data/01_raw/rawimg/
+
+train:
+  type: kedro_ocr.io.image_local.ImageLocalDataSet
+  filepath: data/02_intermediate/train/
+
+test: 
+  type: kedro_ocr.io.image_local.ImageLocalDataSet
+  filepath: data/02_intermediate/test/  
