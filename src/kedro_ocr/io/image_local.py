@@ -56,10 +56,11 @@ class ImageLocalDataSet(AbstractDataSet):
         
 
     def _save(self, data: list) -> None:
-        save_path = Path(glob.glob(self._filepath)[0])
-        save_path.parent.mkdir(parents=True, exist_ok=True)
+        #save_path = Path(glob.glob(self._filepath)[0])
+        #save_path.parent.mkdir(parents=True, exist_ok=True)
         for i, dt in enumerate(data):
-        	cv2.imwrite(str(save_path) + str(i + 1) + '.jpg', dt)  
+        	#cv2.imwrite(str(save_path) + str(i + 1) + '.jpg', dt) 
+            cv2.imwrite(self._filepath + str(i + 1) + '.jpg', dt)  
 
     def _exists(self) -> bool:
         return isdir(self._filepath)

@@ -13,4 +13,4 @@ train:
 
 test: 
   type: kedro_ocr.io.image_local.ImageLocalDataSet
-  filepath: data/02_intermediate/test/  
+  filepath: data/02_intermediate/test/
